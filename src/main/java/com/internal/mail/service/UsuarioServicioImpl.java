@@ -1,4 +1,4 @@
-package com.internal.mail.servicio;
+package com.internal.mail.service;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -14,9 +14,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.internal.mail.controlador.dto.UsuarioRegistroDTO;
-import com.internal.mail.modelo.Rol;
-import com.internal.mail.modelo.Usuario;
+import com.internal.mail.controller.dto.UsuarioRegistroDTO;
+import com.internal.mail.model.Rol;
+import com.internal.mail.model.Usuario;
 import com.internal.mail.repositorio.UsuarioRepositorio;
 
 @Service

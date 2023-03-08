@@ -1,11 +1,11 @@
-package com.internal.mail.servicio;
+package com.internal.mail.service;
 
 import java.util.List;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 
-import com.internal.mail.controlador.dto.UsuarioRegistroDTO;
-import com.internal.mail.modelo.Usuario;
+import com.internal.mail.controller.dto.UsuarioRegistroDTO;
+import com.internal.mail.model.Usuario;
 
 
 public interface UsuarioServicio extends UserDetailsService{

@@ -1,17 +1,17 @@
-package com.internal.mail.controlador;
+package com.internal.mail.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.internal.mail.servicio.UsuarioServicio;
+import com.internal.mail.service.UsuarioServicio;
 
 @Controller
 public class RegistroControlador {
 
 	@Autowired
-	private UsuarioServicio servicio;
+	private UsuarioServicio service;
 	
 	@GetMapping("/login")
 	public String iniciarSesion() {
@@ -19,8 +19,8 @@ public class RegistroControlador {
 	}
 	
 	@GetMapping("/")
-	public String verPaginaDeInicio(Model modelo) {
-		modelo.addAttribute("usuarios", servicio.listarUsuarios());
+	public String verPaginaDeInicio(Model model) {
+		model.addAttribute("usuarios", service.listarUsuarios());
 		return "index";
 	}
 }

@@ -1,4 +1,4 @@
-package com.internal.mail.controlador.dto;
+package com.internal.mail.controller.dto;
 
 public class UsuarioRegistroDTO {
 

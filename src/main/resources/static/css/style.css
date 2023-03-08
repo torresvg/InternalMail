@@ -125,7 +125,7 @@ label {
 
 .col-md-6 {
   background: rgba(141, 141, 141, 0.5); 
-  top: 21%;
+  top: 25%;
 }
 
 a{
@@ -146,6 +146,23 @@ a{
 
 li{
   color: var(--blanco);
+}
+.nav a {
+  color: var(--blanco);
+}
+
+.nav a:hover {
+  text-decoration: none;
+  outline: none;
+  color: var(--blanco);
+  background: rgb(10, 88, 108);
+}
+
+.nav a:active {
+  text-decoration: none;
+  outline: none;
+  color: var(--blanco);
+  background: rgb(61, 72, 87);
 }
 
 a:hover {

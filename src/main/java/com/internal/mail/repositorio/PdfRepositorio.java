@@ -3,11 +3,9 @@ package com.internal.mail.repositorio;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.internal.mail.model.Usuario;
+import com.internal.mail.model.Pdf;
 
 @Repository
-public interface UsuarioRepositorio extends JpaRepository<Usuario, Long>{
+public interface PdfRepositorio extends JpaRepository<Pdf, Long>{
 
-	public Usuario findByEmail(String email);
-	
 }

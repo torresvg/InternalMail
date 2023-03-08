@@ -2,16 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
-<title>Registrate-Internal-Mail</title>
+<title>Registrate-Internal Mail</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	 <link rel="stylesheet" href="./css/style.css">
-     <link rel="icon" href="./img/telefonica.png">
+	<link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/telefonica.png">
 </head>
 <body>
-
 	<nav>
 		<div class="logoh" th:href="@{/login}">
 			<img src="./img/telefonica.png" th:href="@{/login}" class="imglogo">
@@ -28,38 +27,35 @@
 				<form th:action="@{/registro}" method="post" th:object="${usuario}">
 					<div class="form-group">
 						<label class="control-label" for="nombre">Nombre : </label> <input
-							id="nombre" type="text" class="form-control" th:field="*{nombre}"
-							required autofocus="autofocus" placeholder="Digite su nombre">
+							id="nombre" type="text" name="nombre" class="form-control" th:field="*{nombre}"
+							required autofocus="autofocus" placeholder="Digite su nombre" maxlength="15">
 					</div>
 
 					<div class="form-group">
 						<label class="control-label" for="apellido">Apellido : </label> <input
-							id="apellido" class="form-control" th:field="*{apellido}"
-							required autofocus="autofocus" placeholder="Digite su apellido">
+							id="apellido" class="form-control" name="apellido"  th:field="*{apellido}"
+							required autofocus="autofocus" placeholder="Digite su apellido" maxlength="15">
 					</div>
 
 					<div class="form-group">
 						<label class="control-label" for="email">Email : </label> <input
-							id="email" type="email" class="form-control" th:field="*{email}"
-							required autofocus="autofocus" placeholder="Digite el email">
+							id="email" type="email" name="email"  class="form-control" th:field="*{email}"
+							required autofocus="autofocus" placeholder="Digite el email " maxlength="50" >
 					</div>
 
 					<div class="form-group">
 						<label class="control-label" for="password">Clave : </label> <input
-							type="password" id="password" class="form-control" th:field="*{password}"
-							required autofocus="autofocus" placeholder="Digite una clave max 6 caracteres" min="4" maxlength="10">
+							type="password" id="password" name="password" class="form-control" th:field="*{password}"
+							required autofocus="autofocus" placeholder="Digite una clave max 10 caracteres" maxlength="10">
 					</div>
-
 					<div class="form-group">
 						<button type="submit">Registrarse</button>
 						<span>Si estas registrado <a th:href="@{/login}">Inicia Sesión Aquí</a></span>
 					</div>
 				</form>
-
 			</div>
 		</div>
 	</div>
-
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script
