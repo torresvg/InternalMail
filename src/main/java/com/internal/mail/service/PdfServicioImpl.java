@@ -1,9 +1,8 @@
 package com.internal.mail.service;
 
-import com.internal.mail.model.Pdf;
+import com.internal.mail.model.pdf;
 import com.internal.mail.model.Ipdf;
 import java.util.List;
-import com.internal.mail.repositorio.PdfRepositorio;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,28 +10,23 @@ import org.springframework.stereotype.Service;
 @Service
 public class PdfServicioImpl implements PdfServicio{
 
-    private PdfRepositorio pdfRepositorio;
-
+    
     @Autowired
     private Ipdf archi;
 
-    public PdfServicioImpl(PdfRepositorio pdfRepositorio) {
-		this.pdfRepositorio = pdfRepositorio;
-	}
-
     @Override
-    public void save(Pdf pdf){
+    public void save(pdf pdf){
         archi.save(pdf);
     }
 
     @Override
-    public Pdf findOne(Long id){
+    public pdf findOne(Long id){
         return archi.findById(id).orElse(null);
     }
 
     @Override
-    public List<Pdf> ListarPdf(){
-        return pdfRepositorio.findAll();
+    public List <pdf> findAll(){
+        return(List<pdf>)archi.findAll();
     }
 
     @Override

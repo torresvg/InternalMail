@@ -9,13 +9,13 @@ import javax.persistence.Id;
 
 @Entity
 @Table(name = "pdf")
-public class Pdf {
+public class pdf {
     
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
     private String nombrepdf;
-    private Byte[] archivopdf;
+    private byte[] archivopdf;
 
     public Long getId() {
         return id;
@@ -29,19 +29,19 @@ public class Pdf {
     public void setNombrepdf(String nombrepdf) {
         this.nombrepdf = nombrepdf;
     }
-    public Byte[] getArchivopdf() {
+    public byte[] getArchivopdf() {
         return archivopdf;
     }
-    public void setArchivopdf(Byte[] archivopdf) {
+    public void setArchivopdf(byte[] archivopdf) {
         this.archivopdf = archivopdf;
     }
 
-    public Pdf(Long id, String nombrepdf, Byte[] archivopdf) {
+    public pdf(Long id, String nombrepdf, byte[] archivopdf) {
         this.id = id;
         this.nombrepdf = nombrepdf;
         this.archivopdf = archivopdf;
     }
-    public Pdf  (){
+    public pdf  (){
 
     }
 }
